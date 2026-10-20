@@ -1,0 +1,12 @@
+{
+  "name": "ai-triage-console",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "dev": "pnpm --parallel --filter @ai-triage/web --filter @ai-triage/api dev",
+    "dev:web": "pnpm --filter @ai-triage/web dev",
+    "dev:api": "pnpm --filter @ai-triage/api dev",
+    "build": "pnpm --filter @ai-triage/api build && pnpm --filter @ai-triage/web build",
+    "test": "pnpm --filter @ai-triage/api test"
+  }
+}

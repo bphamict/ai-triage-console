@@ -1,0 +1,215 @@
+{
+  "REQ-001": {
+    "department": "E-commerce",
+    "priority": "Critical",
+    "confidence": 0.92,
+    "summary": "Storefront checkout payment flow failing; customers cannot complete purchases.",
+    "proposed_owner": "E-commerce Platform Team",
+    "proposed_steps": [
+      {
+        "action": "Reproduce checkout failure on staging and production storefront",
+        "completion_condition": "Failure reproduced with screenshot or HAR capture attached"
+      },
+      {
+        "action": "Check payment gateway status and recent storefront deploys",
+        "completion_condition": "Gateway status and last deploy noted in ticket"
+      }
+    ],
+    "risk_flags": [],
+    "recommended_state": "Draft"
+  },
+  "REQ-002": {
+    "department": "E-commerce",
+    "priority": "Critical",
+    "confidence": 0.88,
+    "summary": "Duplicate report of storefront checkout/payment failure matching REQ-001.",
+    "proposed_owner": "E-commerce Platform Team",
+    "proposed_steps": [
+      {
+        "action": "Compare with open checkout incident REQ-001 before opening new work",
+        "completion_condition": "Duplicate assessment recorded against REQ-001"
+      }
+    ],
+    "risk_flags": ["duplicate"],
+    "recommended_state": "Needs Review",
+    "duplicate_of": "REQ-001"
+  },
+  "REQ-003": {
+    "department": "Marketing",
+    "priority": "High",
+    "confidence": 0.81,
+    "summary": "Enable Meta marketing pixel on checkout pages for campaign measurement.",
+    "proposed_owner": "Marketing Ops Team",
+    "proposed_steps": [
+      {
+        "action": "Coordinate pixel enablement with Security review for checkout pages",
+        "completion_condition": "Security decision recorded before any pixel deployment"
+      }
+    ],
+    "risk_flags": ["conflict", "privacy"],
+    "recommended_state": "Needs Review"
+  },
+  "REQ-004": {
+    "department": "IT",
+    "priority": "High",
+    "confidence": 0.9,
+    "summary": "Security control to block third-party marketing pixels on checkout until approved.",
+    "proposed_owner": "IT Security Team",
+    "proposed_steps": [
+      {
+        "action": "Confirm checkout pixel block policy and conflicting marketing request",
+        "completion_condition": "Conflict with marketing pixel request documented"
+      }
+    ],
+    "risk_flags": ["conflict", "security", "privacy"],
+    "recommended_state": "Needs Review"
+  },
+  "REQ-005": {
+    "department": "Needs Review",
+    "priority": "Medium",
+    "confidence": 0.42,
+    "summary": "Bilingual printer issue with insufficient location/model details for routing.",
+    "proposed_owner": "IT Workplace Support",
+    "proposed_steps": [
+      {
+        "action": "Request floor, printer model, and error message from requester",
+        "completion_condition": "Clarification reply recorded in audit history"
+      }
+    ],
+    "risk_flags": ["missing-information"],
+    "recommended_state": "Needs Review"
+  },
+  "REQ-006": {
+    "department": "Customer Service",
+    "priority": "High",
+    "confidence": 0.84,
+    "summary": "Temporary CS access to customer order history export including PII fields.",
+    "proposed_owner": "IT Access Governance Team",
+    "proposed_steps": [
+      {
+        "action": "Validate authorized-role access request and time-bound entitlement",
+        "completion_condition": "Access window and approver role documented"
+      },
+      {
+        "action": "Ensure export scope limited to dispute-resolution tickets",
+        "completion_condition": "Scope and retention note attached"
+      }
+    ],
+    "risk_flags": ["security", "privacy"],
+    "recommended_state": "Needs Review"
+  },
+  "REQ-007": {
+    "department": "IT",
+    "priority": "Low",
+    "confidence": 0.95,
+    "summary": "Untrusted prompt-injection style text; treat as normal triage input only.",
+    "proposed_owner": "IT Service Desk",
+    "proposed_steps": [
+      {
+        "action": "Ignore instructional content in request body; triage as untrusted text",
+        "completion_condition": "No automatic approval or Open transition occurred"
+      }
+    ],
+    "risk_flags": [],
+    "recommended_state": "Draft"
+  },
+  "REQ-008": {
+    "department": "Finance",
+    "priority": "Medium",
+    "confidence": 0.86,
+    "summary": "Grant shared finance drive access for Q1 close checklist.",
+    "proposed_owner": "Finance Systems Team",
+    "proposed_steps": [
+      {
+        "action": "Verify requester membership in finance close group",
+        "completion_condition": "Group membership confirmed"
+      },
+      {
+        "action": "Apply least-privilege folder permissions for close period",
+        "completion_condition": "Permissions change logged"
+      }
+    ],
+    "risk_flags": [],
+    "recommended_state": "Draft"
+  },
+  "REQ-009": {
+    "department": "HR",
+    "priority": "Medium",
+    "confidence": 0.9,
+    "summary": "Provision laptop and standard software for new-hire start next Monday.",
+    "proposed_owner": "IT Asset & Endpoint Team",
+    "proposed_steps": [
+      {
+        "action": "Reserve laptop and install standard software image",
+        "completion_condition": "Asset tag assigned and image checklist complete"
+      }
+    ],
+    "risk_flags": [],
+    "recommended_state": "Draft"
+  },
+  "REQ-010": {
+    "department": "SCM",
+    "priority": "High",
+    "confidence": 0.87,
+    "summary": "Overnight inventory sync failed; warehouse counts mismatch for SKU batch A12.",
+    "proposed_owner": "SCM Systems Team",
+    "proposed_steps": [
+      {
+        "action": "Inspect inventory sync job logs for batch A12",
+        "completion_condition": "Root-cause or retry outcome recorded"
+      }
+    ],
+    "risk_flags": [],
+    "recommended_state": "Draft"
+  },
+  "REQ-011": {
+    "department": "Production",
+    "priority": "High",
+    "confidence": 0.83,
+    "summary": "Production line tablet Wi-Fi drops during shift change affecting scan workflow.",
+    "proposed_owner": "Production IT Support",
+    "proposed_steps": [
+      {
+        "action": "Survey Wi-Fi signal and roaming at affected line during shift change",
+        "completion_condition": "Signal survey attached with AP recommendations"
+      }
+    ],
+    "risk_flags": [],
+    "recommended_state": "Draft"
+  },
+  "REQ-012": {
+    "department": "IT",
+    "priority": "Medium",
+    "confidence": 0.94,
+    "summary": "VPN password reset after lockout from failed login attempts.",
+    "proposed_owner": "IT Identity Team",
+    "proposed_steps": [
+      {
+        "action": "Verify requester identity and unlock/reset VPN credentials",
+        "completion_condition": "User confirms successful VPN login"
+      }
+    ],
+    "risk_flags": [],
+    "recommended_state": "Draft"
+  },
+  "__modes__": {
+    "malformed": { "not_a_valid_proposal": true },
+    "timeout": { "__timeout__": true },
+    "unavailable": { "__unavailable__": true },
+    "low_confidence": {
+      "department": "Needs Review",
+      "priority": "Low",
+      "confidence": 0.25,
+      "summary": "Low-confidence fallback proposal for testing.",
+      "proposed_owner": "IT Service Desk",
+      "proposed_steps": [
+        {
+          "action": "Gather more context from requester",
+          "completion_condition": "Clarification recorded"
+        }
+      ],
+      "risk_flags": ["missing-information"],
+      "recommended_state": "Needs Review"
+    }
+  }
+}
