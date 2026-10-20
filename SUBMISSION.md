@@ -27,7 +27,7 @@ pnpm test
 - [x] Role enforcement in NestJS service/guard layer
 - [x] `.env.example` present; no secrets committed
 - [x] `README.md`, `ARCHITECTURE.md`, `AI_USAGE.md`, `SUBMISSION.md`
-- [ ] Tag `submission-v1` on evaluated revision
+- [x] Tag `submission-v1` on evaluated revision
 
 ## No-real-data confirmation
 
