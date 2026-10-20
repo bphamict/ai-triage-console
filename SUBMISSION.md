@@ -4,9 +4,9 @@
 
 | Item | Value |
 | --- | --- |
-| Repository | _(private GitHub URL)_ |
+| Repository | https://github.com/bphamict/ai-triage-console |
 | Tag | `submission-v1` |
-| Commit SHA | _(fill after tagging)_ |
+| Commit SHA | 0ebd2c8d35bcc7b7987eda164c2ca0fabfd72b5f |
 | Demo URL / video | _(optional)_ |
 
 ## Run & test
